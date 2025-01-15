@@ -6,7 +6,6 @@ import 'package:pay_mobile_web_admin/widgets/custom_button.dart';
 import 'package:pay_mobile_web_admin/widgets/custom_textfield.dart';
 import 'package:pay_mobile_web_admin/widgets/height_space.dart';
 
-
 class CreateAdminScreen extends StatefulWidget {
   static const route = '/create-admin';
   const CreateAdminScreen({super.key});
