@@ -19,7 +19,10 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  const MyApp({super.key}) {
+    // TODO: implement
+    throw UnimplementedError();
+  }
 
   @override
   State<MyApp> createState() => _MyAppState();
