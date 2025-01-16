@@ -58,14 +58,10 @@ class AuthService {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       String? authToken = prefs.getString('x-auth-token');
 
-      if (authToken == null) {
-        prefs.setString('x-auth-token', '');
-      }
-
       var returnedTokenResponse = await http.post(Uri.parse('$uri/checkToken'),
           headers: <String, String>{
             "Content-Type": "application/json; charset=UTF-8",
-            'x-auth-token': authToken!
+            'x-auth-token': authToken
           });
       //the response will supply us with true or false according to the tokenIsValid api
       var response = jsonDecode(returnedTokenResponse.body);
